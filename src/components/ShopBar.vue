@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row div-border container-app">
     <div class="col-3">
       <img src="" alt="" />
     </div>

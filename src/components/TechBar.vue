@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-between">
+  <div class="row justify-content-between div-border container-app">
     <div class="col-3 text-center">ciao</div>
     <div class="col-3 text-center">ciao</div>
   </div>
