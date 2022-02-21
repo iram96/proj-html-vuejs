@@ -1,29 +1,36 @@
 <template>
-  <div>
-    <div id="section" class="div-border">
-      <div class="container-app div-border">
-        <div class="row">
-          <div class="col">
-            <hr />
-          </div>
-          <div class="col-2">
-            <h4>Best Sellers</h4>
-            <sub>Must have products from our top sellers</sub>
-          </div>
-          <div class="col">
-            <hr />
-          </div>
-        </div>
-
-        <CardBox :menJacketsList="menJacketsList" />
+  <div id="deals" class="div-border deals">
+    <div class="row">
+      <div class="col p-0">
+        <hr />
+      </div>
+      <div class="col-2 p-0">
+        <h4>Best Sellers</h4>
+        <sub>Must have products from our top sellers</sub>
+      </div>
+      <div class="col p-0">
+        <hr />
       </div>
     </div>
+
+    <CardBox :menJacketsList="menJacketsList" />
   </div>
 </template>
 
 <script>
-export default {};
+import CardBox from "./CardBox.vue";
+
+export default {
+  name: "BestSellerSection",
+  components: {
+    CardBox,
+  },
+  props: ["menJacketsList"],
+};
 </script>
 
-<style>
+<style scoped lang='scss'>
+.deals {
+  height: 600px;
+}
 </style>

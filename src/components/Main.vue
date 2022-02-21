@@ -1,17 +1,34 @@
 <template>
   <div id="main">
-    <div class="imgs-section">
+    <section class="imgs-section">
       <Jumbotron />
-    </div>
+    </section>
     <FeaturedSection :menJacketsList="menJacketsList" />
-    <div class="imgs-section">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
+    <section class="imgs-section row m-0" id="season-cards">
+      <SeasonsCard
+        v-for="season in seasonsList"
+        :key="season.name"
+        :season="season"
+      />
+    </section>
+    <section class="container-app div-border" id="best-sellers">
+      <BestSellerSection :menJacketsList="menJacketsList" />
+    </section>
+    <section class="bg-style" id="deals-section">
+      <div class="container-app div-border row justify-content-around">
+        <div class="col-4">
+          <img src="..\assets\img\promo_box_1_bg.jpg" alt="" />
+        </div>
+        <div class="col-4">
+          <img src="..\assets\img\promo_box_2_bg.jpg" alt="" />
+        </div>
       </div>
-    </div>
-    <BestSellerSection />
+    </section>
+    <BestSellerSection :menJacketsList="menJacketsList" />
+    <section
+      id="reviews"
+      :style="{ 'background-image': `url(${reviewImg})` }"
+    ></section>
   </div>
 </template>
 
@@ -19,14 +36,21 @@
 import Jumbotron from "./Jumbotron.vue";
 import FeaturedSection from "./FeaturedSection.vue";
 import BestSellerSection from "./BestSellerSection.vue";
+import SeasonsCard from "./SeasonsCard.vue";
 
 export default {
   name: "Main",
-  props: ["menJacketsList"],
+  props: ["menJacketsList", "seasonsList"],
   components: {
     Jumbotron,
     FeaturedSection,
     BestSellerSection,
+    SeasonsCard,
+  },
+  data() {
+    return {
+      reviewImg: require("@/assets/img/testimonials_home_1_bg.jpg"),
+    };
   },
 };
 </script>
@@ -37,6 +61,13 @@ export default {
   .imgs-section {
     width: 100%;
     min-height: 700px;
+  }
+  .bg-style {
+    background-color: #f4f8f9;
+  }
+  #reviews {
+    min-height: 60vh;
+    background-attachment: fixed;
   }
 }
 </style>

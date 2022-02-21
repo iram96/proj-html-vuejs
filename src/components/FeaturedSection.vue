@@ -1,15 +1,15 @@
 <template>
   <div id="section" class="div-border">
-    <div class="container-app div-border">
+    <div class="container-app div-border w-100">
       <div class="row">
-        <div class="col">
+        <div class="col p-0">
           <hr />
         </div>
         <div class="col-2">
           <h4>Featured Products</h4>
           <sub>Must have products from our top sellers</sub>
         </div>
-        <div class="col">
+        <div class="col p-0">
           <hr />
         </div>
       </div>
@@ -32,6 +32,8 @@ export default {
 
 <style scoped lang='scss'>
 #section {
-  min-height: 80vh;
+  .w-100 {
+    height: 70vh;
+  }
 }
 </style>

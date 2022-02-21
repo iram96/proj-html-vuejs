@@ -1,5 +1,5 @@
 <template>
-  <div class="row div-border container-app">
+  <div class="row div-border container-app max-width">
     <div class="col-3">
       <img src="" alt="" />
     </div>
@@ -22,8 +22,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "ShopBar",
+};
 </script>
 
-<style>
+<style scoped lang='scss'>
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="col">
-    <div class="row div-border"><TechBar /></div>
-    <div class="row div-border"><ShopBar /></div>
+    <div class="row div-border header-style"><TechBar /></div>
+    <div class="row div-border header-style"><ShopBar /></div>
   </div>
 </template>
 
@@ -19,4 +19,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.header-style {
+  max-width: 100%;
+}
 </style>

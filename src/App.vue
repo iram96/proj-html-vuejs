@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <Header />
-      <Main :menJacketsList="menJacketsList" />
+      <Main :menJacketsList="menJacketsList" :seasonsList="seasonsList" />
       <Footer />
     </div>
   </div>
@@ -22,6 +22,7 @@ export default {
   },
   data() {
     return {
+      // ! ARRAY GIACCHE UOMO
       menJacketsList: [
         {
           name: "Black Leather Jacket",
@@ -42,32 +43,63 @@ export default {
           img: require("@/assets/img/blue_jacket_and_white_stripe_tee-400x520.jpg"),
         },
         {
-          name: "Black Leather Suit",
+          name: "Modern Black Leather Suit",
           tags: ["Men", "Jackets"],
           price: "$176",
           img: require("@/assets/img/modern_black_leather_suit-400x520.jpg"),
         },
       ],
+
+      // ! ARRAY STAGIONI
+      seasonsList: [
+        {
+          name: "Winter Collection",
+          subTitle: "STYLISH AND WARM",
+          img: require("@/assets/img/winter_collection_bg.jpg"),
+        },
+        {
+          name: "Spring Collection",
+          subTitle: "BRIGHT AND COLORFUL",
+          img: require("@/assets/img/spring_collection_bg.jpg"),
+        },
+        {
+          name: "Autumn Collection",
+          subTitle: "RICH AND COMFORTABLE",
+          img: require("@/assets/img/autumn_collection_bg.jpg"),
+        },
+      ],
     };
   },
+  methods: {},
 };
 </script>
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap.scss";
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
 
-  .container-app {
-    max-width: 80vw;
-    margin: 0 auto;
-  }
-  .div-border {
-    border: black dotted 3px;
+    .container-app {
+      max-width: 80vw;
+      margin: 0 auto;
+    }
+
+    img {
+      max-width: 100%;
+    }
+    .clearfix:after {
+      display: table;
+      content: "";
+      clear: both;
+    }
   }
 }
 </style>
