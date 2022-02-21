@@ -14,7 +14,7 @@
         </div>
       </div>
       <img src="..\assets\img\hover-button3.png" alt="" />
-      <CardBox :men_jackets_list="menJacketsList" />
+      <CardBox :menJacketsList="menJacketsList" class="" />
     </div>
   </div>
 </template>

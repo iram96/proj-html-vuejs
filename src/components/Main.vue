@@ -3,7 +3,7 @@
     <div class="imgs-section">
       <Jumbotron />
     </div>
-    <ProductsSection :men_jackets_list="menJacketsList" />
+    <FeaturedSection :menJacketsList="menJacketsList" />
     <div class="imgs-section">
       <div class="row">
         <div class="col"></div>
@@ -11,20 +11,22 @@
         <div class="col"></div>
       </div>
     </div>
-    <ProductsSection />
+    <BestSellerSection />
   </div>
 </template>
 
 <script>
 import Jumbotron from "./Jumbotron.vue";
-import ProductsSection from "./ProductsSection.vue";
+import FeaturedSection from "./FeaturedSection.vue";
+import BestSellerSection from "./BestSellerSection.vue";
 
 export default {
   name: "Main",
   props: ["menJacketsList"],
   components: {
     Jumbotron,
-    ProductsSection,
+    FeaturedSection,
+    BestSellerSection,
   },
 };
 </script>

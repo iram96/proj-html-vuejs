@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <Header />
-      <Main :men_jackets_list="menJacketsList" />
+      <Main :menJacketsList="menJacketsList" />
       <Footer />
     </div>
   </div>

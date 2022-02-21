@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img :src="jacket.img" alt="" class="featured-img" />
+  <div class="col-2">
+    <img :src="jacket.img" alt="" class="featured-img d-block w-100" />
     <span>{{ jacket.name }}</span>
   </div>
 </template>
