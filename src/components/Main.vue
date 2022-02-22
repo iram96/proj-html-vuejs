@@ -29,6 +29,43 @@
       id="reviews"
       :style="{ 'background-image': `url(${reviewImg})` }"
     ></section>
+    <section id="blog">
+      <BlogSection />
+      <hr />
+    </section>
+    <section id="categories" class="row justify-content-center max-width">
+      <div class="col-2">
+        <SmallerCard
+          v-for="item in seasonsList"
+          :key="item.name"
+          :item="item"
+        />
+      </div>
+
+      <div class="col-2">
+        <SmallerCard
+          v-for="item in seasonsList"
+          :key="item.name"
+          :item="item"
+        />
+      </div>
+
+      <div class="col-2">
+        <SmallerCard
+          v-for="item in seasonsList"
+          :key="item.name"
+          :item="item"
+        />
+      </div>
+
+      <div class="col-2">
+        <SmallerCard
+          v-for="item in seasonsList"
+          :key="item.name"
+          :item="item"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -37,6 +74,8 @@ import Jumbotron from "./Jumbotron.vue";
 import FeaturedSection from "./FeaturedSection.vue";
 import BestSellerSection from "./BestSellerSection.vue";
 import SeasonsCard from "./SeasonsCard.vue";
+import BlogSection from "./BlogSection.vue";
+import SmallerCard from "./SmallerCard.vue";
 
 export default {
   name: "Main",
@@ -46,6 +85,8 @@ export default {
     FeaturedSection,
     BestSellerSection,
     SeasonsCard,
+    BlogSection,
+    SmallerCard,
   },
   data() {
     return {
