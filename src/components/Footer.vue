@@ -95,7 +95,7 @@
             <a href="#">ciao</a>
             <a href="#">parola</a>
             <a href="#">ciao</a>
-            <a href="#">parola</a>
+
             <a href="#">ape</a>
             <a href="#">ciao</a>
             <a href="#">parola</a>
@@ -108,7 +108,15 @@
         </div>
       </div>
     </section>
-    <section id="end-page"></section>
+    <section id="end-page" class="py-3">
+      <span class="text-white">
+        <i class="fa-solid fa-copyright"></i>
+        Copyright 2012 - 2022 | Avada Theme by Theme Fusion | All Rights
+        Reserved | Powered by WordPress
+      </span>
+
+      <img :src="require('@/assets/img/payment_cards_footer.png')" alt="" />
+    </section>
   </div>
 </template>
 
@@ -176,6 +184,11 @@ export default {
   #end-page {
     background-color: #1c1e21;
     min-height: 100px;
+    text-align: center;
+    img {
+      display: block;
+      margin: 5px auto;
+    }
   }
 }
 </style>
