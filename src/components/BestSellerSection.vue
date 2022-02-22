@@ -1,6 +1,6 @@
 <template>
-  <div id="deals" class="div-border deals">
-    <div class="row">
+  <div class="deals">
+    <div class="row max-width">
       <div class="col p-0">
         <hr />
       </div>
@@ -31,6 +31,6 @@ export default {
 
 <style scoped lang='scss'>
 .deals {
-  height: 600px;
+  min-height: 600px;
 }
 </style>

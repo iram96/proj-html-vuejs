@@ -1,7 +1,7 @@
 <template>
   <div id="section" class="div-border">
     <div class="container-app div-border w-100">
-      <div class="row">
+      <div class="row max-width">
         <div class="col p-0">
           <hr />
         </div>

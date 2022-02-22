@@ -66,6 +66,9 @@
         />
       </div>
     </section>
+    <section id="brand-logos" class="text-center">
+      <h4>Brand Logos</h4>
+    </section>
   </div>
 </template>
 
@@ -109,6 +112,10 @@ export default {
   #reviews {
     min-height: 60vh;
     background-attachment: fixed;
+  }
+  #brand-logos {
+    min-height: 300px;
+    background-color: #f6f6f6;
   }
 }
 </style>

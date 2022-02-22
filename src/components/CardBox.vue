@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center max-width">
     <Card
       v-for="jacket in menJacketsList"
       :key="jacket.name"
