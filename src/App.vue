@@ -3,7 +3,7 @@
     <div>
       <Header />
       <Main :menJacketsList="menJacketsList" :seasonsList="seasonsList" />
-      <Footer />
+      <Footer :seasonsList="seasonsList" />
     </div>
   </div>
 </template>
@@ -88,7 +88,7 @@ export default {
     color: #2c3e50;
 
     .container-app {
-      max-width: 80vw;
+      max-width: 70vw;
       margin: 0 auto;
     }
 

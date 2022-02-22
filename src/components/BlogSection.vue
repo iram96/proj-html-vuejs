@@ -5,7 +5,7 @@
         <hr />
       </div>
       <div class="col-2 p-0">
-        <h4>Best Sellers</h4>
+        <h4>From Our Blog</h4>
         <sub>Must have products from our top sellers</sub>
       </div>
       <div class="col p-0">
