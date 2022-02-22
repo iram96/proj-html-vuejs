@@ -2,7 +2,12 @@
   <div id="app">
     <div>
       <Header />
-      <Main :menJacketsList="menJacketsList" :seasonsList="seasonsList" />
+      <Main
+        :menJacketsList="menJacketsList"
+        :seasonsList="seasonsList"
+        :genericClothingList="genericClothingList"
+        :femaleClothingList="femaleClothingList"
+      />
       <Footer :seasonsList="seasonsList" />
     </div>
   </div>
@@ -22,6 +27,7 @@ export default {
   },
   data() {
     return {
+      genericClothingList: [],
       // ! ARRAY GIACCHE UOMO
       menJacketsList: [
         {
@@ -32,7 +38,7 @@ export default {
         },
         {
           name: "Black Leather Suit",
-          tags: ["Men", "Jackets"],
+          tags: ["Jackets", "Men"],
           price: "$176",
           img: require("@/assets/img/black_leather_suit-400x520.jpg"),
         },
@@ -68,9 +74,43 @@ export default {
           img: require("@/assets/img/autumn_collection_bg.jpg"),
         },
       ],
+      // ! ARRAY FEMMINILE
+      femaleClothingList: [
+        {
+          name: "Hipster Black Top",
+          tags: ["Women", "T-shirt"],
+          price: "$57",
+          img: require("@/assets/img/hipster_black_top-400x520.jpg"),
+        },
+        {
+          name: "Spring Printed Dress",
+          tags: ["Women", "Dress"],
+          price: "$47",
+          img: require("@/assets/img/spring_printed_dress-400x520.jpg"),
+        },
+        {
+          name: "Modern Love Tee",
+          tags: ["Women", "T-shirt"],
+          price: "$68",
+          img: require("@/assets/img/modern_love_tee-400x520.jpg"),
+        },
+        {
+          name: "Black Jacket",
+          tags: ["Women", "Jackets"],
+          price: "$125",
+          img: require("@/assets/img/black_leather_jacket-400x520.jpg"),
+        },
+      ],
     };
   },
-  methods: {},
+  methods: {
+    createList(firstArray, secondArray) {
+      this.genericClothingList = firstArray.concat(secondArray);
+    },
+  },
+  mounted() {
+    this.createList(this.menJacketsList, this.femaleClothingList);
+  },
 };
 </script>
 
@@ -105,6 +145,13 @@ export default {
     }
     .w-100 {
       width: 100%;
+    }
+    .bg-transparent {
+      border-color: white;
+      border-width: 2px 2px 2px 2px;
+      border-radius: 25px 25px 25px 25px;
+      background: rgba(255, 255, 255, 0.114582);
+      color: white;
     }
   }
 }

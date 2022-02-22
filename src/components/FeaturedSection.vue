@@ -1,20 +1,20 @@
 <template>
-  <div id="section" class="div-border">
+  <div id="section" class="py-3">
     <div class="container-app div-border w-100">
       <div class="row max-width">
         <div class="col p-0">
           <hr />
         </div>
-        <div class="col-2">
-          <h4>Featured Products</h4>
-          <sub>Must have products from our top sellers</sub>
+        <div class="col-4">
+          <h1>Featured Products</h1>
+          <sub class="fs-5">Must have products from our top sellers</sub>
         </div>
         <div class="col p-0">
           <hr />
         </div>
       </div>
       <img src="..\assets\img\hover-button3.png" alt="" />
-      <CardBox :menJacketsList="menJacketsList" class="" />
+      <CardBox :selectedList="menJacketsList" class="" />
     </div>
   </div>
 </template>

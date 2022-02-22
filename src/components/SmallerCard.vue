@@ -1,6 +1,6 @@
 <template>
   <div id="card " class="row">
-    <div class="d-inline-block col">
+    <div class="d-inline-block col text-start">
       <span class="d-block">{{ item.name }}</span>
       <span>{{ item.subTitle }}</span>
     </div>
@@ -20,6 +20,7 @@ export default {
 <style scoped lang='scss'>
 #card {
   border-bottom: 2px black solid;
+
   img {
     width: 30px;
     height: 60px;

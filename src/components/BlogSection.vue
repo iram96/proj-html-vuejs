@@ -1,12 +1,12 @@
 <template>
-  <div id="blog">
+  <div id="blog" class="py-3">
     <div class="row max-width">
       <div class="col p-0">
         <hr />
       </div>
       <div class="col-2 p-0">
-        <h4>From Our Blog</h4>
-        <sub>Must have products from our top sellers</sub>
+        <h1>From Our Blog</h1>
+        <sub class="fs-5">Must have products from our top sellers</sub>
       </div>
       <div class="col p-0">
         <hr />

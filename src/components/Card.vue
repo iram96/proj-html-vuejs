@@ -1,20 +1,20 @@
 <template>
   <div class="col-2">
-    <img :src="jacket.img" alt="" class="featured-img d-block w-100" />
-    <span>{{ jacket.name }}</span>
+    <img :src="item.img" alt="" class="featured-img d-block w-100" />
+    <span class="d-block">{{ item.name }}</span>
+    <div class="d-block">
+      <span v-for="tag in item.tags" :key="tag.name"> {{ tag }}</span>
+    </div>
+    <span class="d-block">{{ item.price }}</span>
   </div>
 </template>
 
 <script>
 export default {
   name: "Card",
-  props: ["jacket"],
+  props: ["item"],
 };
 </script>
 
 <style scoped lang='scss'>
-.featured-img {
-  width: 100px;
-  height: 200px;
-}
 </style>

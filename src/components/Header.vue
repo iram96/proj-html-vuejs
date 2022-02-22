@@ -1,7 +1,9 @@
 <template>
   <div class="col">
     <div class="row div-border header-style"><TechBar /></div>
-    <div class="row div-border header-style"><ShopBar /></div>
+    <div class="row div-border header-style">
+      <ShopBar :navbarList="navbarList" />
+    </div>
   </div>
 </template>
 
@@ -14,6 +16,11 @@ export default {
   components: {
     TechBar,
     ShopBar,
+  },
+  data() {
+    return {
+      navbarList: ["Home", "Shop", "Products", "Categories", "New", "Elements"],
+    };
   },
 };
 </script>
